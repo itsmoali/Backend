@@ -8,6 +8,7 @@ load_dotenv()
 
 openai.api_key = os.getenv("OPEN_AI_API_KEY")
 
+
 # json_file = "Backend\GPT_API\example.json"
 
 # with open(json_file) as f:
@@ -285,9 +286,6 @@ def create_course(duration, topic, difficulty):
     
     elif response.choices[0].finish_reason == 'length':
         return response.choices[0].message.content
-
-
-
 
 
 
