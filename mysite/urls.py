@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(("GPT_API.urls", "GPT_API"), namespace="GPT_API")),
+    path('', include(("API.urls", "API"), namespace="API")),
 ]
