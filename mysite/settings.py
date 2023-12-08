@@ -29,11 +29,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['172.31.18.215','localhost','127.0.0.1','.vercel.app']
 
 
-CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000'
-]
-
-
 
 
 # Application definition
@@ -46,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders',
     'API.apps.UserApi',
     'GPT_API.apps.GPTApi'
 ]
@@ -59,10 +53,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+
 ]
 
-ROOT_URLCONF = 'Backend.urls'
+ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [
     {
@@ -80,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Backend.wsgi.application'
+WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 # Database
