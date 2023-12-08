@@ -51,7 +51,7 @@ def create_service(client_secret_file, api_name, api_version, *scopes, prefix=''
 
 
 
-CLIENT_SECRET_FILE = 'credentials.json'
+CLIENT_SECRET_FILE = 'Backend/credentials.json'
 API_NAME = 'calendar'
 API_VERSION = 'v3'
 SCOPES = ['https://www.googleapis.com/auth/calendar']

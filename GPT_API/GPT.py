@@ -9,7 +9,8 @@ openai.api_key = os.getenv("OPEN_AI_API_KEY")
 
 
 # json_file = "Backend\\GPT_API\\base_model.json"
-json_file = "GPT_API\\base_model.json"
+json_file = "GPT_API/base_model.json"
+
 
 with open(json_file) as f:
     data= json.load(f)
