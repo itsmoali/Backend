@@ -1,0 +1,251 @@
+
+
+
+{
+    "course":  "Chess",
+    "diffuculty" : "beginner",
+    "duration" : "20 days",
+    "description": [
+      {
+        "day": 1,
+        "topics": [
+          {
+            "title": "Understanding the Game",
+            "subtopics": [
+              "Chess History and Cultural Significance",
+              "Objective of the Game",
+              "Chess as Skill and Strategy"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "topics": [
+          {
+            "title": "Chessboard Basics",
+            "subtopics": [
+              "Chessboard Layout",
+              "Ranks and Files Recap"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "topics": [
+          {
+            "title": "Chess Notation",
+            "subtopics": [
+              "Algebraic Notation",
+              "Reading and Writing Moves",
+              "Importance of Recording Games"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "topics": [
+          {
+            "title": "Setting up the Chessboard",
+            "subtopics": [
+              "Placing Pieces Correctly",
+              "Identifying Pieces"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "topics": [
+          {
+            "title": "How Chess Pieces Move",
+            "subtopics": [
+              "Pawn Movement and Capturing",
+              "Movement Rules for Each Piece"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "topics": [
+          {
+            "title": "Special Moves - Castling",
+            "subtopics": [
+              "Castling as a Defensive Move",
+              "When and How to Castle"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "topics": [
+          {
+            "title": "Special Moves - En Passant and Pawn Promotion",
+            "subtopics": [
+              "En Passant Capture",
+              "Pawn Promotion Rules and Strategies"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "topics": [
+          {
+            "title": "Importance of the Center",
+            "subtopics": [
+              "Significance of Central Control",
+              "Centralization of Pieces"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 9,
+        "topics": [
+          {
+            "title": "Pawn Structures",
+            "subtopics": [
+              "Different Pawn Formations",
+              "Common Patterns and Plans"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 10,
+        "topics": [
+          {
+            "title": "Opening Principles",
+            "subtopics": [
+              "Developing Pieces in the Opening",
+              "Common Opening Mistakes"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 11,
+        "topics": [
+          {
+            "title": "Development and Piece Activity",
+            "subtopics": [
+              "Efficient Piece Development",
+              "Exploiting Opponent’s Underdeveloped Pieces"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 12,
+        "topics": [
+          {
+            "title": "Basic Checkmating Patterns",
+            "subtopics": [
+              "Back Rank Mate",
+              "Simple Checkmating Combinations"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 13,
+        "topics": [
+          {
+            "title": "Tactics - Forks and Pins",
+            "subtopics": [
+              "Understanding Forks",
+              "Identifying Pins"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 14,
+        "topics": [
+          {
+            "title": "Tactics - Skewers and Discovered Attacks",
+            "subtopics": [
+              "Recognizing Skewers",
+              "Discovered Attacks and Strategies"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 15,
+        "topics": [
+          {
+            "title": "Open Files and Outposts",
+            "subtopics": [
+              "Importance of Open Files",
+              "Creating Outposts"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 16,
+        "topics": [
+          {
+            "title": "Pawn Breaks",
+            "subtopics": [
+              "Strategic Use of Pawn Breaks",
+              "Recognizing Favorable Moments for Pawn Breaks"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 17,
+        "topics": [
+          {
+            "title": "Initiative and Counterplay",
+            "subtopics": [
+              "Seizing the Initiative",
+              "Creating Counterplay"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 18,
+        "topics": [
+          {
+            "title": "Recognizing Tactical Themes",
+            "subtopics": [
+              "Expanding Tactical Awareness",
+              "Solving Tactical Puzzles"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 19,
+        "topics": [
+          {
+            "title": "Planning and Positional Understanding",
+            "subtopics": [
+              "Formulating Strategic Plans",
+              "Understanding Key Positional Concepts"
+            ]
+          }
+        ]
+      },
+      {
+        "day": 20,
+        "topics": [
+          {
+            "title": "Introduction to Endgames",
+            "subtopics": [
+              "Transitioning from Middle Game to Endgame",
+              "Basic Endgame Principles"
+            ]
+          }
+        ]
+      }]}
+  

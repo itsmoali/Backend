@@ -1,7 +1,4 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, JsonResponse
 from .models import Courses
@@ -11,8 +8,23 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
-from .validations import info_validation
-from .GPT import create_course
+from .validations import info_validation, output_validation
+from .GPT import create_schedule
+from Calendar_API.main import event_creator
+
+
+class CreateSchedule(APIView):
+
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def post(self,request):
+       
+        clean_data = info_validation(request.data)
+
+        gpt_output = create_schedule(clean_data[0], clean_data[1], clean_data[2])
+
+        return Response(gpt_output)
+    
 
 class CourseList(APIView):
 
@@ -24,30 +36,23 @@ class CourseList(APIView):
         serializer = CoursesSerializer(courses, many=True)
         return Response(serializer.data)
 
-class CourseDetail(APIView):
-    permission_classes = (permissions.AllowAny,)
 
-    def post(self,request):
-
-        clean_data = info_validation(request.data)
-
-        return Response(clean_data)
-
+    
 
 class CreateCourse(APIView):
 
-    permission_classes = (permissions.AllowAny,)
+    permission_classes = (permissions.IsAuthenticated,)
     
 
     def post(self,request):
        
     
-        clean_data = info_validation(request.data)
+        gpt_output = output_validation(request.data)
 
-        gpt_output = create_course(clean_data[0], clean_data[1], clean_data[2])
+        # gpt_output = create_schedule(clean_data[0], clean_data[1], clean_data[2])
 
         serializer = CoursesSerializer(data = {'course_name':gpt_output['course'], 'course_difficulty': gpt_output['difficulty'],
-                                    'course_duration': gpt_output['duration'],'course_description': str(gpt_output['description'])})
+                                    'course_duration': gpt_output['duration'],'course_schedule': str(gpt_output['schedule'])})
         
         if serializer.is_valid(raise_exception=True):
             course = serializer.create(serializer.validated_data)
@@ -57,10 +62,20 @@ class CreateCourse(APIView):
 
 
 
-        
+class ScheduleMaker(APIView):
+     
+     permission_classes = (permissions.IsAuthenticated,)
 
+     def post(self,request):
+            data = request.data
+            course_data = data['course_data']
+            start_date = data['start_date']
+            start_time = data['start_time']
+            daily_practice_time = int(data['daily_practice_time'])
 
+            final = event_creator(course_data, start_date, start_time, daily_practice_time)
 
+            return Response (final, status=status.HTTP_200_OK)
 
 
 

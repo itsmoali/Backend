@@ -1,5 +1,5 @@
 """
-URL configuration for mysite project.
+URL configuration for Backend project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
-    path('', include(("GPT_API.urls", "GPT_API"), namespace="GPT_API")),
-    path('', include(("API.urls", "API"), namespace="API")),
+    path('', include('API.urls')),
+    path('', include('GPT_API.urls'))
+
 ]
