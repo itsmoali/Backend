@@ -1,3 +1,6 @@
 /venv
+/token files
+
 .env
-credentials.json
+.credentials
+credentials
