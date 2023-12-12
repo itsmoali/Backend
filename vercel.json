@@ -1,13 +1,28 @@
 {
-    "builds": [{
+    "builds": [
+      {
         "src": "mysite/wsgi.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "mysite/wsgi.py"
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.9",
+          "functions": {
+            "api": {
+              "memory": 1024,
+              "runtime": "python3.9"
+            }
+          }
+        },
+        "hooks": {
+          "prebuild": "apt-get update && apt-get install -y libmysqlclient-dev"
         }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "mysite/wsgi.py"
+      }
     ]
-}
+  }
+  
