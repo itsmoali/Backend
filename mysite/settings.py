@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['*']
+CORS_ALLOWED_ORIGINS = ['https://railway.vercel.app','https://railway.now.sh','http://localhost:3000','https://backend-swart-tau.vercel.app']
 
 ROOT_URLCONF = 'mysite.urls'
 
