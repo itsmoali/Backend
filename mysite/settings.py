@@ -66,22 +66,7 @@ CORS_ORIGIN_WHITELIST = [
 ] 
 
 
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]
 
-CORS_ALLOW_HEADERS = [
-    'Access-Control-Allow-Headers',
-    'Access-Control-Allow-Origin',
-    'Authorization',
-    'Content-Type',
-    'X-CSRFToken',
-]
 
 
 ROOT_URLCONF = 'mysite.urls'
